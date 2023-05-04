@@ -39,7 +39,7 @@
         <div class="form-group" style="text-align: center;">
             <p>Already have an account? <span style="display: inline-block;"><a href="index.html">Login Here</a></span>
             </p>
-            <a href="registered.php">View Registered User</a>
+            
         </div>
         </div>
 

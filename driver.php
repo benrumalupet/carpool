@@ -6,6 +6,22 @@
     <title>Driver Page</title>
     <link rel="stylesheet" href="passenger.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <?php
+    session_start();
+    $id = $_SESSION['uID'];
+    include 'connection.php';
+    $sql = "SELECT * FROM tbl_users WHERE uID = '$id'";
+    $query = $conn->query($sql);
+
+    if (!$query) {
+        echo "Error executing query: " . $conn->error;
+    } else {
+        $row = $query->fetch_array();
+        // rest of your code here
+    }
+    ?>
+
 </head>
 
 <body>
@@ -20,12 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
+                    <a class="nav-link" href="driver.php">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="#">About</a>
                 </li>
-                <li class="nav-item active"  class="nav-item active" style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
+                <li class="nav-item active" class="nav-item active"
+                    style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);">
                     <a id="logout-button" onclick="confirmLogout()"> Log Out </a>
                     <script>
                         function confirmLogout() {
@@ -59,9 +76,9 @@
         <div class="row justify-content-center">
             <div class="content">
                 <br><br>
-                <h1>Welcome Driver 😊</h1>
-                <p>Here you can find all the information you need to register as a driver with our company.</p>
-                <button class="button"><a href="car-regist.php">Register a Car</a></button>
+                <?php echo "<h1 class='title'>Welcome to Carpool App Driver, " . $row['fName'] . "! 😊 </h1>" ?>
+                <p>Here you can find all the information you need to register your car with our Carpool App 🚗</p>
+                <button class="button"><a href="car-regist.php">Register Car</a></button>
                 <button class="button"><a href="car-registered.php">Registered Car(s)</a></button>
                 <button class="button"><a href="#">Registration Process</a></button>
             </div>

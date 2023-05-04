@@ -47,9 +47,10 @@
 
       <div class="form-group">
         <label for="cr_file">OR/CR File:</label>
-        <input type="file" class="form-control-file" id="cr_file" name="cr_file"
-          accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" maxlength="26214400" required>
+        <input type="file" class="form-control-file" id="cr_file" name="cr_file" accept="image/*" maxlength="26214400"
+          required>
       </div>
+
 
       <div class="form-group">
         <label for="seatType">Seat Type:</label>
@@ -63,7 +64,9 @@
 
       <button type="submit" class="btn btn-primary">Submit</button>
       <!-- Add a Clear Fields button -->
-      <button type="button" class="btn btn-secondary" onclick="clearFields()" style="background-color: red; color: white; padding: 7px 20px; border: none; border-radius: 5px;">Clear Fields </button>
+      <button type="button" class="btn btn-secondary" onclick="clearFields()"
+        style="background-color: red; color: white; padding: 7px 20px; border: none; border-radius: 5px;">Clear Fields
+      </button>
       <script>
         function clearFields() {
           document.getElementById("carName").value = "";
@@ -79,7 +82,8 @@
         }
       </script>
       <!-- Add a Back button -->
-      <a href="driver.php" class="btn btn-secondary" style="background-color: blue; color: white; padding: 6px 20px; border: none; border-radius: 5px;">Back</a>
+      <a href="driver.php" class="btn btn-secondary"
+        style="background-color: blue; color: white; padding: 6px 20px; border: none; border-radius: 5px;">Back</a>
     </form>
   </div>
 </body>

@@ -23,13 +23,13 @@ if(isset($_POST['email']) && isset($_POST['password'])){
         $_SESSION['LName'] = $row['LName'];
         $_SESSION['pNum'] = $row['pNum'];
         if($_SESSION['uType'] == 'Passenger'){
-            header("Location: passenger.php");
+            header("Location: passenger.php?user=".$row['uID']);
             exit();
         } else if($_SESSION['uType'] == 'Driver'){
-            header("Location: driver.php");
+            header("Location: driver.php?user=".$row['uID']);
             exit();
         }else if($_SESSION['uType'] == 'Admin'){
-            header("Location: admin.php");
+            header("Location: admin.php?user=".$row['uID']);
             exit();
         }
 
