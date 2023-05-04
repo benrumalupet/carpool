@@ -1,0 +1,55 @@
+body {
+    font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+    color: #404040;
+    background: linear-gradient(to bottom, #0ca3d2, #ffffff);
+  }
+  h2{
+    text-align: center;
+  }
+  form {
+    text-align: left;
+    display: flex;
+  flex-direction: column;
+  
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    text-align: left;
+    width: 100%;
+    max-width: 400px; /* add this line to limit the width of the input fields */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+  }
+  input.left-align {
+    text-align: left;
+  }
+  input[type="submit"] {
+    background-color: #0ca3d2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #007cbf;
+  }
+  

@@ -81,7 +81,7 @@
             ?>
         </table>
         <br>
-        <br><a href="index.php" class="button">Register Another User</a>
+        <br><a href="signup.php" class="button">Register Another User</a>
     </div>
 </body>
 </html>

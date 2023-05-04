@@ -27,16 +27,18 @@ if (isset($_POST['register'])) {
 
 
     // Insert the user's information into the database
-    $sql = "INSERT INTO tbl_users (`username`, `password`, `email`, `uType`, `fName`, `mName`, `LName`, `pNum`) VALUES (' $username','$password', '$email', '$user_role', ' $first_name', ' $middle_name', '$last_name', '$phone_number')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Registration successful!";
+    $sql = "INSERT INTO tbl_users (`username`, `password`, `email`, `uType`, `fName`, `mName`, `LName`, `pNum`) VALUES (' $username','$password', '$email', 'Passenger', ' $first_name', ' $middle_name', '$last_name', '$phone_number')";
+   
+    if ($conn->query($sql) === TRUE) {
+        echo "<script>alert('Registration Succesful (Wait for the Confirmation)');</script>";
+        header("Location: ./index.html");
     } else {
-        echo "Error: " . mysqli_error($conn);
+        echo "<script>alert('Error');</script>" . $sql . "<br>" . $conn->error;
     }
 
     // Close the database connection
     mysqli_close($conn);
-  header("Location: ./index.php");
+    echo "<script>alert('Registration Succesful (Wait for the Confirmation)');</script>";
+
 }
 ?>
