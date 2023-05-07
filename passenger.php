@@ -78,8 +78,8 @@
         <div class="row justify-content-center">
             <div class="content">
                 <br><br>
-                <?php echo "<h1 class='title'>Welcome to Carpool App Passenger, " . $row['fName'] . "!</h1>" ?>
-                😊
+                <?php echo "<h1 class='title'>Welcome to Carpool App Passenger, " . $row['fName'] . "! 😊 </h1>" ?>
+                
                 <p>Here you can find all the information you need to register as a driver with our Carpool App 🚗.</p>
                 <button class="button"><a href="#">Edit Profile</a></button>
                 <button class="button"><a href="car-regist.php">Register a Car</a></button>
